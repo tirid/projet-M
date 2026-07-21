@@ -1,0 +1,653 @@
+/* */
+
+.galerie{
+    display:flex; /*aligne les éléments*/
+    flex-wrap:wrap;
+    gap: 22px;
+    justify-content: center;
+    padding: 20px;
+
+}
+
+.polaroid{
+    background: #FFF8EE;
+    padding:10px 10px 16px;
+    border-radius:10px;
+    width:200px;
+    transform: rotate(-4deg);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    
+}
+
+.polaroid img{
+    width: 100%; /*l'image conservera 100% du cadre */
+    height: auto; /* calcule la hauteur de l'image (responsive) */
+    object-fit: cover;
+    border-radius:3px;/* arrondi les bords de l'image */
+    display: block;
+}
+
+.polaroid_droite{
+    background: #FFF8EE;
+    padding:10px 10px 16px;
+    border-radius:10px;
+    width:200px;
+    transform: rotate(4deg);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    height:auto;
+}
+
+.polaroid_droite img{
+    width: 100%; /*l'image conservera 100% du cadre */
+    height: auto; /* calcule la hauteur de l'image (responsive) */
+    object-fit: cover;
+    border-radius:3px;/* arrondi les bords de l'image */
+    display: block;
+    
+
+}
+
+.titre_polaroid {
+    margin-bottom: 5px;
+}
+
+
+.titre_polaroid{
+
+padding: 10px;
+}
+
+.polaroid .titre_polaroid{
+    font-size:14px;
+    margin: 12px 4px 0;
+}
+
+
+
+
+.polaroid_droite .titre_polaroid{
+    font-size:14px;
+    margin: 12px 4px 0;
+}
+
+
+
+.polaroid_v2{
+   
+    background: #FFF8EE;
+    padding:10px 10px 0px;
+    border-radius:10px;
+    width:200px;
+    transform: rotate(-3deg);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    height:auto
+
+}
+
+.polaroid_v2 img{
+    width: 100%; /*l'image conservera 100% du cadre */
+    height: auto; /* calcule la hauteur de l'image (responsive) */
+    object-fit: cover;
+    border-radius:3px;/* arrondi les bords de l'image */
+    display: block;
+}
+
+.polaroid_v2 .titre_polaroid{
+    font-size:14px;
+    margin: 12px 4px 0;
+}
+
+.polaroid_v2_droite{
+    background: #FFF8EE;
+    padding:10px 10px 16px;
+    border-radius:10px;
+    width:200px;
+    transform: rotate(3deg);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    height:auto;
+}
+
+.polaroid_v2_droite img{
+    width: 100%; /*l'image conservera 100% du cadre */
+    height: auto; /* calcule la hauteur de l'image (responsive) */
+    object-fit: cover;
+    border-radius:3px;/* arrondi les bords de l'image */
+    display: block;
+}
+
+.polaroid_v2_droite .titre_polaroid{
+    font-size:14px;
+    margin: 12px 4px 0;
+}
+
+.polaroid:hover{
+    transform: rotate(0deg) scale(1.05); /* scale pour agrandir l'image */
+}
+
+.polaroid_v2:hover{
+    transform: rotate(0deg) scale(1.05); /* scale pour agrandir l'image */
+}
+
+.polaroid_droite:hover{
+     transform: rotate(0deg) scale(1.05); /* scale pour agrandir l'image */
+}
+
+.polaroid_v2_droite:hover{
+     transform: rotate(0deg) scale(1.05); /* scale pour agrandir l'image */
+}
+
+#bouton_menu{  /* propriétés du bouton hamburger */
+    font-size :40px;
+    padding:8px; /* modifie les marge du bouton en haut et à gauche */
+    color:white;
+}
+
+#menu{
+    position:fixed;
+    top: 0px;
+    left:-220px;
+    width: 140px;
+    height: 600px;
+    background-color: #45e6e6;
+    transition:left 0.3s;
+    padding-top:25px;
+}
+
+#menu_contenu{
+    position: fixed;
+    top:8px;
+    left:40px; /* décale le bouton vers la gauche */
+    z-index: 1000;
+}
+
+
+#menu a:hover{ /* quand on passe au dessus des liens */
+    background-color: white ;
+    color: black;
+}
+
+#menu_contenu:hover #menu {
+    left: 0; /* ramène le menu au début de l'écran */
+}
+
+#menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+
+#menu_marron{
+    position:fixed;
+    top: 0px;
+    left:-220px;
+    width: 140px;
+    height: 600px;
+    background-color: #ab7f79;
+    transition:left 0.3s;
+    padding-top:25px;
+}
+
+#menu_marron a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+
+#menu_marron a:hover{ /* quand on passe au dessus des liens */
+    background-color:white;
+    color: black;
+}
+
+#menu_contenu:hover #menu_marron {
+    left: 0; /* ramène le menu au début de l'écran */
+}
+
+
+#menu_fonce{
+    position:fixed;
+    top: 0px;
+    left:-220px;
+    width: 140px;
+    height: 600px;
+    background-color: #16698C;
+    transition:left 0.3s;
+    padding-top:25px;
+}
+
+#menu_fonce a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+
+#menu_fonce a:hover{ /* quand on passe au dessus des liens */
+    background-color:white;
+    color: black;
+}
+
+#menu_contenu:hover #menu_fonce {
+    left: 0; /* ramène le menu au début de l'écran */
+}
+
+
+h1{
+    color: white;
+    font-family:Verdana ;
+    font-family: "Lobster", cursive;  /* police lobster*/
+    font-style: normal; 
+    font-size: 35px;   /* change la taille du texte h1 titre*/
+    
+    
+}
+
+.banniere { /* style du bloc image+texte*/
+    background-image: url(EPF/Banière.jpg);
+    background-size: cover;
+    background-position: center 67%;
+    height: 480px;
+    position: relative;
+}
+
+.banniere h1{ /* style que du titre h1 dans la banniere*/
+position: absolute;
+top:1px; /* positionne le titre h1*/
+left : 450px;
+}
+
+.vrai_logo{ /* permet de fixer l'image */
+    position: fixed;
+    top: 8px;
+    left: 1158px;
+    z-index:10;
+
+
+}
+
+.premiere{
+    background-color:#C3ECF7 ;
+}
+
+.deuxieme{
+    background-color: #EDE3D2;
+}
+
+.troisieme{
+    background-color: #15ACCD;
+}
+
+
+p{
+    font-family: "Lobster", cursive;
+    line-height:1.7;
+  font-weight: 400;
+  font-style: normal;
+  padding:20px;
+  text-align: center;
+  
+}
+
+.texte_centre{
+font-family:'Space Mono', monospace;
+  max-width:1100px; /* défini la largeur jusqu'à laquelle le texte peut aller */
+  margin:0 auto 4rem; /* haut gauche/droite bas */
+  text-align:center;
+  padding:0px;
+  font-size:0.95rem;
+  line-height:1.7;
+  opacity:0.75;
+  margin-top:10px;
+}
+  
+h2{
+    font-family: "Lobster", cursive;
+  font-weight: 400;
+  font-style: normal;
+  padding:20px;
+  text-align:center;
+}
+
+h3{
+    font-family: "Lobster", cursive;
+  font-weight: 400;
+  font-style: normal;
+  padding:20px;
+  text-align:center;
+}
+
+a{
+    font-family: "Lobster", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color:black
+}
+  
+
+.fleche{
+    position : absolute; /*La flèche peut être placée exactement où je veux avec top, left, right ou bottom*/
+    z-index: 10;
+    top: 35px;
+    left : 25px;
+    font-size: 110px;
+    color : red;
+    
+}
+
+.photo{
+    display : flex; /*permet de mettre le texte à côté de la photo */
+    align-items: center;
+    gap : 10px; /* rajoute un espace entre la photo et le texte */
+    position: relative;/* Les éléments placés à l'intérieur de .photo pourront se positionner par rapport à cette image.*/
+    
+}
+
+.photo_droite{
+    display:flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap:10px;
+    
+}
+.contenu{
+    flex-direction: column;
+}
+
+.titre_deux{
+    color:black;
+    text-align: center;
+}
+
+.titre{
+    color:white;
+    text-align: center;
+}
+
+.centre { /* pour centrer l'image */
+    display: block;
+    margin: auto;
+}
+
+.images{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    justify-content: center; /*centrer horizontalement*/
+}
+
+.bord_blanc{ 
+    padding:16px;
+    background-color: #F7F2E7;
+    position:relative;
+    box-shadow: 0 18px 30px -12px rgba(43,38,34,0.18), 0 2px 6px rgba(43,38,34,0.08);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    margin-bottom: 25px;
+  
+}
+
+.rangee_images{
+    display:flex; /*aligne les éléments*/
+    flex-wrap:wrap;
+    gap: 26px;
+    justify-content: center;   
+    
+}
+
+.washi{
+    transform:translateX(-50%) rotate(-3deg); /*la décale ensuite de la moitié de sa largeur vers la gauche et tourne de 3 degrés dans le sens anti horaire*/
+    position:absolute;
+    top: -14px;/*place le washi par rapport au haut du bord*/
+    left:50%; /*place le bord gauche de la photo au milieu de la page.*/
+    width:70px;
+    height:26px;
+    background:repeating-linear-gradient(
+         45deg,
+    rgba(226,112,79,0.55),
+    rgba(226,112,79,0.55) 6px,
+    rgba(226,112,79,0.35) 6px,
+    rgba(226,112,79,0.35) 12px
+
+    );
+    opacity:0.8;
+}
+
+.bord_blanc:nth-child(1){ transform: rotate(1.6deg); }
+.bord_blanc:nth-child(2){ transform: rotate(-2deg); }
+.bord_blanc:nth-child(3){ transform: rotate(2.4deg); }
+
+
+.bord_blanc:hover{
+  transform: translateY(-6px) rotate(0deg);
+  box-shadow: 0 26px 40px -14px rgba(43,38,34,0.18), 0 4px 10px rgba(43,38,34,0.1);
+ 
+}
+
+.taille{
+    margin-bottom:25px;
+    width:320px;
+    padding:16px;
+    background-color: #F7F2E7;
+    position:relative;
+    box-shadow: 0 18px 30px -12px rgba(43,38,34,0.18), 0 2px 6px rgba(43,38,34,0.08);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.taille img{
+    width:100%;
+    height:240px;
+    object-fit: cover;
+}
+
+.taille:nth-child(1){ transform: rotate(-2deg); }
+.taille:nth-child(2){ transform: rotate(1.6deg); }
+.taille:nth-child(3){ transform: rotate(-2deg); }
+.taille:nth-child(4){ transform: rotate(2.4deg); }
+.taille:nth-child(5){ transform: rotate(-1.8deg); }
+.taille:nth-child(6){ transform: rotate(2deg); }
+.taille:nth-child(7){ transform: rotate(-2.4deg); }
+.taille:nth-child(8){ transform: rotate(2deg); }
+.taille:nth-child(9){ transform: rotate(-2.4deg); }
+
+
+.taille:hover{
+  transform: translateY(-6px) rotate(0deg);
+  box-shadow: 0 26px 40px -14px rgba(43,38,34,0.18), 0 4px 10px rgba(43,38,34,0.1);
+    
+}
+
+/* bouton en bas à droite pour changer de page */
+.bouton_bleu{
+    color:black;
+    background-color:#45e6e6;
+    width: 160px;
+    display:inline-block;/* permet de rendre toute la zone cliquable */
+    height:40px;
+    font-size:22px;
+    text-decoration: none; /* retirer le soulignage */
+    padding:12px 6px 8px 10px; /* haut droite bas gauche */
+    text-align: center;
+     border-radius: 10px;
+    
+}   
+
+.bouton_bleu:hover {
+    background-color: #45e6e6;
+    color: black;
+    text-decoration: none;
+    
+}
+
+.zone_bouton{
+    display: flex;
+    justify-content: flex-end; /* aligne le bouton à droite */
+   
+}
+
+.bouton_marron{
+    color:black;
+    background-color:#ab7f79;
+    width: 160px;
+    display:inline-block;/* permet de rendre toute la zone cliquable */
+    height:40px;
+    font-size:22px;
+    text-decoration: none; /* retirer le soulignage */
+    padding:12px 6px 8px 10px; /* haut droite bas gauche */
+    text-align: center;
+     border-radius: 10px;
+    
+}   
+
+.bouton_marron:hover {
+    background-color: #ab7f79;
+    color: black;
+    text-decoration: none;
+    
+}
+
+body{
+    background: #C3ECF7;
+}
+
+
+.bord_bleu{
+    box-shadow: 0 18px 30px -12px rgba(43,38,34,0.18), 0 2px 6px rgba(43,38,34,0.08);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    width:320px;
+    position:relative;
+    border: 6px solid #c49c37;      /* bord jaune, collé à l'image */
+    outline: 16px solid #0f1b30 ;
+    outline-offset: 0;
+    margin-bottom:25px;
+   
+
+}
+
+.bord_bleu img{
+    width:100%;
+    height:240px;
+    object-fit: cover;
+    
+}
+
+.rangee_images2{
+    display:flex; /*aligne les éléments*/
+    flex-wrap:wrap;
+    gap:60px;
+    justify-content: center;   
+    
+}
+
+.bord_bleu_haut img{
+    width:100%;
+    height:240px;
+    object-fit: cover;
+    object-position: 50% 20%;;
+}
+
+
+.bord_bleu_haut{
+    box-shadow: 0 18px 30px -12px rgba(43,38,34,0.18), 0 2px 6px rgba(43,38,34,0.08);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    width:320px;
+    position:relative;
+    border: 6px solid #c49c37;      /* bord jaune, collé à l'image */
+    outline: 16px solid #0f1b30 ;
+    outline-offset: 0;
+    margin-bottom:25px;
+}
+ 
+
+.bord_bleu_bas img{
+    width:100%;
+    height:240px;
+    object-fit: cover;
+    object-position: 50% 100%;
+}
+
+.bord_bleu_bas{
+    width:320px;
+    position:relative;
+    border: 6px solid #c49c37;      /* bord jaune, collé à l'image */
+    outline: 16px solid #0f1b30 ;
+    outline-offset: 0;
+    margin-bottom:25px;
+ 
+
+}
+
+.new_year{
+    background-color: #0f1b30;
+    width:320px;
+    position:relative;
+    padding: 16px;    
+    height: fit-content;
+  
+}
+
+.new_year img{
+    width:100%;
+    height:240px;
+    object-fit: cover;
+    
+}
+
+.new_year{
+    background-color: #0f1b30;
+    width:320px;
+    position:relative;
+    padding: 16px;
+  
+}
+
+.new_year img{
+    width:100%;
+    height:240px;
+    object-fit: cover;
+    
+}
+
+
+.bord_rose{
+    background-color: #F2547D;
+    width:320px;
+    position:relative;
+    padding: 16px;
+  
+}
+
+.bord_rose img{
+    width:100%;
+    height:240px;
+    object-fit: cover;
+    
+}
+
+
+.bord_rose_haut img{
+    width:100%;
+    height:240px;
+    object-fit: cover;
+    object-position: top;
+}
+
+
+.bord_rose_haut{
+    background-color: #F2547D;
+    width:320px;
+    padding: 16px;
+}
+
+
+
+.bord_ski{
+    background-color: #8FCBDF;
+    width:320px;
+    position:relative;
+    padding: 16px;
+  
+}
+
+.bord_ski img{
+    width:100%;
+    height:240px;
+    object-fit: cover;
+    
+}
